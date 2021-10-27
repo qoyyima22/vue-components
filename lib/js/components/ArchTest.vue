@@ -13,7 +13,7 @@
           <input
             ref="archTagInput"
             type="text"
-            :value="label"
+            :value="label + 'corosii'"
             readonly
             class="arch-tag__control-field"
           />
