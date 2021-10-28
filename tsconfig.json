@@ -19,9 +19,6 @@
     "declaration": false,
     "noEmitOnError": false,
     "lib": [ "dom", "es5", "es2015.promise", "es2015.iterable"],
-    "types": [
-      "webpack-env"
-    ],
     "paths": {
       "@/*": [
         "src/*"

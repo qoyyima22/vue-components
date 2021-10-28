@@ -1,6 +1,6 @@
 <template>
   <v-tooltip v-model="visible" top>
-    <template v-slot:activator>
+    <template v-slot:activator="on">
       <div
         class="arch-tag__container"
         :class="tagClass"
@@ -58,3 +58,74 @@ export default class ArchTag extends Vue {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  .arch-tag__container {
+    font-family: "Courier New" !important;
+    background: #f1ebeb;
+    border-radius: 4px;
+    font-weight: bolder;
+    border: dashed 1px #b1acac;
+    text-align: center;
+    margin: 0 !important;
+    overflow-x: hidden;
+
+    &:hover, .arch-tag__control-field:hover {
+      cursor: pointer;
+    }
+
+    &:hover .arch-tag__control .arch-tag__icon {
+      opacity: 1;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .arch-tag__control-field {
+      padding: 4px;
+      width: 100%;
+      text-align: center;
+
+      &:focus,
+      &:active {
+        outline: none;
+      }
+    }
+
+    .arch-tag__control {
+      position: relative;
+
+      .arch-tag__icon {
+        opacity: 0;
+        transition: opacity 0.1s linear;
+      }
+
+      .arch-tag__icon > * {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 16px;
+      }
+    }
+
+    &.code--primary {
+      background-color: #dcf5ef;
+      border-color: #67af9e;
+
+      & > * {
+        color: #67af9e;
+      }
+    }
+
+    &.code--secondary {
+      background-color: rgba(239, 239, 239, 1);
+      border-color: rgba(181, 181, 181, 1);
+
+      & > * {
+        color: rgba(181, 181, 181, 1);
+      }
+    }
+  }
+</style>
