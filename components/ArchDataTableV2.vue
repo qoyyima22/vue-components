@@ -33,7 +33,7 @@
           <v-text-field
             v-if="enableSearch"
             v-model="searchQuery"
-            placeholder="Search"
+            placeholder="Test External Component"
             prepend-inner-icon="mdi-magnify"
             hide-details
             dense

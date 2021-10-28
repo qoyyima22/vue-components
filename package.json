@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "files": [
-    "lib/js/components/*.vue"
+    "components/*.vue"
   ] ,
   "scripts": {
     "serve": "vue-cli-service serve",

@@ -13,7 +13,7 @@
           <input
             ref="archTagInput"
             type="text"
-            :value="label + 'corosii'"
+            :value="label + ' arch-tag component from external directory'"
             readonly
             class="arch-tag__control-field"
           />
